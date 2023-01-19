@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Learn Enough JavaScript</title>
+      <meta charset="utf-8">
+      <script src = "dayname.js"></script>
+      <script src = "palindrome.js"></script>
+      
+    </head>
+    <body>
+      <h1>Hello World</h1>
+      <p>This page includes an alert written in JavaScript.</p>
+      <p id="para1"></p>
+      <p id="2"></p>
+      <p id="3"></p>
+      <p id="4"></p>
+      <p id="5"></p>
+      <script>
+        //alert("Hello, World");
+        //alert("It's Alive!");
+        //console.log("hello world");
+        //alert("Hello", "World");
+        //let jive = "hello from Yuma"
+        //let jivetoo = "it's hot here"
+        //console.log("Hello to the World", "How are you?", jive, jivetoo);
+        //const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+        let now = new Date();
+        let today = dayName(now);
+        console.log(today);
+        alert(greeting(now));
+        let reversed = "Racecar🦊".reverse();
+        document.getElementById("4").innerHTML = reversed;
+        console.log(reversed);
+        //reversed = palindrome("Level");
+        console.log(reversed);
+        //reversed = palindrome("sDeeds");
+        console.log(reversed);
+        document.getElementById("para1").innerHTML = `Hello, World! Happy ${today}`;
+        let myBirthday = new Date("Jan 1, 1960");
+        document.getElementById("2").innerText = ("My birthday is " + myBirthday);
+        let moonLanding = new Date("July 20, 1969 20:18");
+        document.getElementById("3").innerHTML =("I was born this many milliseconds before the moon landing: " + (myBirthday-moonLanding));
+
+      </script>
+    </body>
+  </html>

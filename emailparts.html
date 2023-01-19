@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Learn Enough JavaScript</title>
+      <meta charset="utf-8">
+      <script src = "dayname.js"></script>
+      <script src = "palindrome.js"></script>
+      <script src = "emailparts.js"></script>
+    </head>
+    <body>
+      <h1>Hello World</h1>
+      <p>JavaScript.</p>
+      <p id="para1"></p>
+      <p id="2"></p>
+      <p id="3"></p>
+      <p id="4"></p>
+      <p id="5"></p>
+      <script>
+        let components = emailParts("benbrown3882@gmail.com");
+        console.log(components);
+        components = emailParts("username@gmail.com");
+        console.log(components);
+        alert(emailParts("username@domain.etc"));
+
+
+      </script>
+    </body>
+  </html>
