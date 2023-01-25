@@ -1,4 +1,4 @@
-let Phrase = require("mhartl-palindrome");
+let Phrase = require("ben3882-palindrome");
 
 let string = prompt("Enter a string for palindrome testing:");
 let phrase = new Phrase(string);

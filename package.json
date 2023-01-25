@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ben3882-palindrome": "^0.1.0",
+    "mhartl-palindrome": "^0.2.3"
+  }
+}
