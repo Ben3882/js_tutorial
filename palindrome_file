@@ -1,0 +1,13 @@
+#!/snap/bin/node
+
+let fs = require("fs");
+let Phrase = require("ben3882-palindrome");
+
+let text = fs.readFileSync("phrases.txt", "utf-8");
+text.split("\n").forEach(function(line) {
+    let phrase = new Phrase(line);
+    if(phrase.palindrome()) {
+        console.log("Palindrome detected", line);
+        fs.appendFileSync("palindrome.txt", "\n" + line)
+    } 
+})

@@ -1,0 +1,27 @@
+#!/snap/bin/node
+
+let urllib = require("urllib");
+let fs = require("fs");
+let Phrase = require("mhartl-palindrome");
+let url = "https://cdn.learnenough.com/phrases.txt";
+
+urllib.request(url, {followRedirect : true}, function (error, data, response) {
+    let body = data.toString();    
+    let palindromes = body.split("\n").filter(line => {
+        phrase = new Phrase(line);
+        console.log(phrase.palindrome());
+        return phrase.palindrome();        
+        })
+        palindromes.forEach((d,i) => {
+            console.log("Palindrome detected", palindromes[i]);
+            fs.appendFileSync("palindrome.txt", "\n" + palindromes[i])
+        })
+    
+    /*body.split("\n").forEach(function(line) {
+        let phrase = new Phrase(line);
+        if(phrase.palindrome()) {
+            console.log("Palindrome detected", line);
+            fs.appendFileSync("palindrome.txt", "\n" + line)
+        } 
+    })*/
+})
